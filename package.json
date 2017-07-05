@@ -4,7 +4,8 @@
   "description": "Slack Trackbot for Running or Walking",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
   },
   "author": "JD Richards and Dave Fenest",
   "license": "ISC",
