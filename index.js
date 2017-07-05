@@ -8,11 +8,11 @@ require('dotenv').config()
 
 
 
-mongoose.connect(process.env.DB_URL_DEV, function(err, res){
+mongoose.connect(process.env.MONGODB_URI, function(err, res){
   if(err){
     console.log('DB CONNECTION FAIL: ' + err)
   }else{
-    console.log('DB CONNECTION SUCCESS: ' + process.env.DB_URL_DEV)
+    console.log('TRACKBOT DATABASE LISTENING' )
   }
 })
 
