@@ -6,8 +6,6 @@ const mongoose = require('mongoose')
 const routes = require('./routes/index')
 require('dotenv').config()
 
-
-
 mongoose.connect(process.env.MONGODB_URI, function(err, res){
   if(err){
     console.log('DB CONNECTION FAIL: ' + err)
@@ -15,13 +13,10 @@ mongoose.connect(process.env.MONGODB_URI, function(err, res){
     console.log('TRACKBOT DATABASE LISTENING' )
   }
 })
-
-
-
+app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use('/', routes)
-
 
 app.listen(port, ()=>{
 	console.log('Listening on port' + port)

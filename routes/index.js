@@ -4,7 +4,7 @@ const router = express.Router()
 
 
 router.get('/', (req, res, next) => {
-	res.status(200).send('Hello Trackbot!')
+	res.status(200).sendFile('/public/index.html')
 })
 
 module.exports = router
